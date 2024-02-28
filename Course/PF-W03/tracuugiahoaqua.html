@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="hq" />
+    <button onclick="xemgia()">Xem Giá</button>  
+    <h3 id="kq">VND/KG</h3>
+    <script>
+        function xemgia() {
+            let hq = document.getElementById("hq").value.toLowerCase();
+            let gia = 0;
+            if (hq == "ổi") {
+                gia = 20000;
+            }
+            if (hq == "dưa hấu") {
+                gia = 20000;
+            }
+            if (hq == "táo") {
+                gia = 30000;
+            }
+            if (hq == "xoài") {
+                gia = 30000;
+            }
+            if (hq == "cam") {
+                gia = 40000;
+            }
+            if (hq == "chôm chôm") {
+                gia = 40000;
+            }
+            if (hq == "măng cụt") {
+                gia = 50000;
+            }
+            document.getElementById("kq").innerHTML = gia + "VND/kg";
+        }
+    </script>
+</body>
+</html>
