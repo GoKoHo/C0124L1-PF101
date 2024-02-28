@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th style="width: 50px;"></th>
+            <th>From Currency</th>
+            <th style="width: 50px;"></th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input id="nhap" type="number"></td>
+            <td style="width: 50px;"></td>
+            <td><select id="dv1">
+                <option value="1">Việt Nam</option>
+                <option value="24785">Mỹ</option>
+                <option value="165">Nhật Bản</option>
+            </select></td>
+            <td style="width: 50px;"></td>
+            <td><select id="dv2">
+                <option value="1">VND</option>
+                <option value="24785">USD</option>
+                <option value="165">JPY</option>
+            </select></td> 
+            <td><button style="background-color: blueviolet;color: white;" onclick="convert()">Convert</button></td>
+            <td><button style="background-color: blue;color: white;" onclick="reset()">Reset</button></td>
+    </table>
+    <h5 style="color: blueviolet;" id="run"></h5>
+    <script>
+        function convert() {
+         let a = +document.getElementById("nhap").value;
+         let b = +document.getElementById("dv1").value;
+         let c = +document.getElementById("dv2").value;
+         let result = a * b / c
+         document.getElementById("run").innerHTML = "Result:" + result
+        }
+        function reset() {
+         document.getElementById("nhap").value = "";
+         document.getElementById("dv1").value = "";
+         document.getElementById("dv2").value = "";
+         document.getElementById("run").innerHTML = "";
+        }
+     </script>
+</body>
+</html>
