@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th style="width: 100px;"></th>
+            <th>From Currency</th>
+            <th style="width: 100px;"></th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input id="nhap" type="number"></td>
+            <td></td>
+            <td><select name="" id="dv1">
+                <option value="1">Việt Nam</option>
+                <option value="163">Nhật Bản</option>
+                <option value="25000">Mỹ</option>
+                </select>
+            </td>
+            <td></td>
+            <td><select id="dv2">
+                    <option value="1">VND</option>
+                    <option value="163">JPY</option>
+                    <option value="25000">USD</option>
+                </select>
+            </td>
+            <td><button style="background-color: cornflowerblue; color: aliceblue;"  onclick="convert()">Convert</button></td>
+        </tr>
+    </table>
+    <p style="color: blue;" id="run"></p>
+    <script>
+        function convert() {
+            let a = +document.getElementById("nhap").value;
+            let b = +document.getElementById("dv1").value;
+            let c = +document.getElementById("dv2").value;
+            let result = a*b/c
+            document.getElementById("run").innerHTML = "Result : " + result
+        }
+    </script>
+</body>
+</html>
