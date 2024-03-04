@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Vòng lập là cú pháp trong lập trình giúp lặp 1 đoạn code nhiều lần -->
+    <!-- 
+        while(A){
+            X
+        }
+        Nếu A đúng thì làm X
+
+        for (a;b;c){
+            x
+        }
+        a chạy trước b và chỉ chạy 1 lần thường dùng để khởi tạo đếm
+        b nếu b đúng thì chạy c và x
+        c chạy sau x, thường dùng để thay đổi biến đếm
+
+        do {
+            x
+        } while (a)
+        x chắn chắn chạy 1 lần trước khi kiểm tra a đúng hay sai
+        Nếu a đúng thì là x
+     -->
+     <script>
+        let N = +prompt("Nhập vào N:");
+        let S = +prompt("Nhập vào S:");
+        for(let x = 0; x <= N; x++){
+            for(let y =0; y <=N;y++){
+                for(let z = 0; z <=N;z++){
+                    if(x+y+z == 2 ){
+                        document.write(x+","+y+","+z+"<br>");
+                    }
+                }
+            }
+        }
+     </script>
+</body>
+</html>
