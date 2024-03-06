@@ -23,15 +23,14 @@
         //  in ra các phần tử theo vị trí chẵn
         // in ra các phần tử > 20
         // in ra trung bình cộng các phần tử chia hết cho 3 trong mảng
-        let sum= 0;
-        let average = 0;
+        // tìm số lớn nhẩt
+        let a = arr[0];
         for (let i = 0 ; i < arr.length; i++){
-            if(arr[i] % 3 == 0) {
-            sum += arr[i];
-            average++;
+            if(a < arr[i]) {
+            a = arr[i];
             }
         }
-        document.write(sum/average);
+        document.write(a);
     </script>
     
 </body>
