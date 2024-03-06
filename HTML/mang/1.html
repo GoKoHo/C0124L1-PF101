@@ -17,10 +17,12 @@
             }
     -->
     <script>
-        let xyz = [ 3, 4 ,5, 23 , 1, "hâha"];
-        alert(xyz[3]);
+        let xyz = [ 3, 34 ,25, 23 , 12, 15];
+        // in ra các phần tử chẵn trong mảng
         for (let i = 0 ; i < xyz.length; i++){
-            document.write(xyz[i] + "");
+            if(xyz[i] % 2 ==0) {
+            document.write(xyz[i] + " ");
+            }
         }
     </script>
 </body>
