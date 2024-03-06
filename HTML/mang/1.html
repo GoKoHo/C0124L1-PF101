@@ -17,15 +17,18 @@
             }
     -->
     <script>
-        let xyz = [ 3, 34 ,25, 23 , 12, 15];
+        let arr = [ 3, 34 ,25, 23 , 12, 15];
         // in ra các phần tử chẵn trong mảng
         // in ra các phần tử trong mảng, chẵn thì nằm trong thẻ p, lẻ thì nằm trong thẻ h3
         //  in ra các phần tử theo vị trí chẵn
-        for (let i = 0 ; i < xyz.length; i++){
-            if(i % 2 == 0) {
-            document.write(xyz[i] + " ");
+        // in ra các phần tử > 20
+        let sum = 0;
+        for (let i = 0 ; i < arr.length; i++){
+            if(arr[i] >= 20) {
+            sum += arr[i];
             }
         }
+        document.write(sum);
     </script>
     
 </body>
