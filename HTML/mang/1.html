@@ -19,11 +19,16 @@
     <script>
         let xyz = [ 3, 34 ,25, 23 , 12, 15];
         // in ra các phần tử chẵn trong mảng
+        // in ra các phần tử trong mảng, chẵn thì nằm trong thẻ p, lẻ thì nằm trong thẻ h3
         for (let i = 0 ; i < xyz.length; i++){
             if(xyz[i] % 2 ==0) {
-            document.write(xyz[i] + " ");
+            document.write("<p>" + xyz[i] + "</p>");
+            }
+            else {
+                document.write("<h3>" + xyz[i] + "</h3>");
             }
         }
     </script>
+    
 </body>
 </html>
