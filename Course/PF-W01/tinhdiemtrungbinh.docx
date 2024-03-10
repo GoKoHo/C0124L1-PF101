@@ -1,0 +1,5 @@
+Nhap diem toan
+Nhap diem ly
+Nhap diem hoa
+Average = (toan + ly + hoa ) / 3
+Display Average

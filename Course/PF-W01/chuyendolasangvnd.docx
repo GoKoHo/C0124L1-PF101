@@ -1,0 +1,4 @@
+nhap so do la muon doi
+mot dola = 23000 vnd
+tinh tien = 23000 * so do muon doi
+display tinh tien
