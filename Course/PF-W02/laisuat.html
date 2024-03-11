@@ -10,7 +10,8 @@
         let sotienmuongui = +prompt("Nhập vào số tiền muốn gửi:");
         let laisuat = +prompt("Nhập vào số lãi xuất muốn gửi");
         let sonamgui = +prompt('Nhập số năm muốn gửi:');
-        
-    </script>
+        let sotiennhan = sotienmuongui + sonamgui * sotienmuongui / 100 * laisuat 
+        document.write("Số tiền sẽ nhận sau " + sonamgui + " là :" + sotiennhan)
+   </script>
 </body>
 </html>
