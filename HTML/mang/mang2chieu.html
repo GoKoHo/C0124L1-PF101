@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // mảng 2 chiều : là mảng mà trong đó có 1 phần tử là mảng
+        // in ra các phần tử > 10
+        let arr = [
+            [1,22,3,5,6],
+            [7,6,29],
+            [55,3,9,42],
+        ]
+        for(let i = 0; i < arr[i].length;i++){
+            for (let j = 0; j < arr[i].length; j++){
+                if(arr[i][j] > 10 ){
+                    document.write(arr[i][j]+ " ");
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

@@ -27,12 +27,14 @@
         // tìm số lớn thứ 2
         // nhập vào x ,in ra vị trí của x ở trong mảng 
         let max = arr[0];
-        let x = +prompt('Nhập vào x: ');
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] == x) {
-                document.write(i + "<br>");
+        let vitri = 0;
+        for (let i = 0; i < arr.length; i++){
+            if(max < arr[i]){
+                max = arr[i]
+                vitri = i
             }
         }
+        document.write("Max là : " + max + " nằm ở vị trí " + vitri);
     </script>
     
 </body>
