@@ -24,13 +24,15 @@
         // in ra các phần tử > 20
         // in ra trung bình cộng các phần tử chia hết cho 3 trong mảng
         // tìm số lớn nhẩt
-        let a = arr[0];
-        for (let i = 0 ; i < arr.length; i++){
-            if(a < arr[i]) {
-            a = arr[i];
+        // tìm số lớn thứ 2
+        // nhập vào x ,in ra vị trí của x ở trong mảng 
+        let max = arr[0];
+        let x = +prompt('Nhập vào x: ');
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                document.write(i + "<br>");
             }
         }
-        document.write(a);
     </script>
     
 </body>
