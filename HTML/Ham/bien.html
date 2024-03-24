@@ -7,14 +7,15 @@
 </head>
 <body>
     <script>
-        function check(a) {
-            if (a >= 0 ){
-                return "true";
-            } else {
-                return "false";
-            }
+        let arr = [1,2,3];
+        function f1 (x){
+            arr.push(x);
         }
-        alert(check(-4));
+        f1(10);
+        f1(20);
+        f1("");
+        f1();
+        document.write(arr);
     </script>
 </body>
 </html>
