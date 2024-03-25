@@ -10,14 +10,14 @@
     <button onclick="startGame()">Chơi</button>
     <script>
         function startGame() {
-            var count = 0;
-            var flag = false;
+            let count = 0;
+            let flag = false;
             while(count < 3 && !flag) {
                 count++;
-                var min_value = parseInt(prompt("Nhập giá trị nhỏ nhất: "));
-                var max_value = parseInt(prompt("Nhập giá trị lớn nhất: "));
-                var random_value = Math.floor(Math.random() * (max_value - min_value +1 )) + min_value;
-                var guess_value = parseInt(prompt("Nhập giá trị bạn đoán: "));
+                let min_value = parseInt(prompt("Nhập giá trị nhỏ nhất: "));
+                let max_value = parseInt(prompt("Nhập giá trị lớn nhất: "));
+                let random_value = Math.floor(Math.random() * (max_value - min_value +1 )) + min_value;
+                let guess_value = parseInt(prompt("Nhập giá trị bạn đoán: "));
                 if (guess_value == random_value) {
                     alert("Chúc mừng bạn đã đoán đúng !");
                     flag = true;

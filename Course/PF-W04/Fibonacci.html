@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dãy Fibonacci</h1>
+    <p>Nhập dãy số nguyên dương n:</p>
+    <input type="number" name="" id="n">
+    <button onclick="fibonacci()">In ra dãy Fibonacci</button>
+    <p id="result"></p>
+    <script>
+        function fibonacci() {
+            let n = parseInt(document.getElementById("n").value);
+            let a = 0;
+            let b = 1;
+            let fibs = [];
+            while (fibs.length < n) {
+                fibs.push(a);
+                let temp = a;
+                a = b ;
+                b = temp + b;
+            }
+        let result = "Dãy Fibonacci " + n + "số đầu tiên : " +fibs.join(",");
+        document.getElementById("result").innerHTML = result; 
+        }
+    </script>
+</body>
+</html>
