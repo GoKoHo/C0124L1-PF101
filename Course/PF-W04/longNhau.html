@@ -7,14 +7,18 @@
 </head>
 <body>
     <script>
-        let sour;
+        let sour, i, j;
         sour = "<table border = '1' width = '300' cellspacing = '0' cellpading = '3'> "
-        for (i = 1 ; i <= 10; i++) {
+        i = j = 1;
+        while ( i <= 10) {
             sour = sour + "<tr>";
-            for (j = 1; j <= 10; j++) {
-                sour = sour + "<td>" + i * j + "</td>";
-            }
-            sour = sour + "</tr>";
+                while (j <=10 ){
+                    sour = sour + "<td>" + i * j + "</td>";
+                    j++;
+                }
+                sour = sour + "</tr>";
+                j = 1;
+                i++;
         }
         sour = sour + "</table>";
         document.write(sour);
