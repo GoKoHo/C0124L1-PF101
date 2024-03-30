@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findAvg(scores) {
+          const totalScore = scores.reduce((sum, score) => sum + score, 0);
+          const numScores = scores.length;
+          const averageScore = totalScore / numScores;
+          return averageScore;
+        }
+        const scores = [10, 8, 9, 7];
+        const averageScore = findAvg(scores);
+        console.log(averageScore);
+    </script>
+</body>
+</html>

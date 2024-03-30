@@ -1,42 +1,20 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Dãy Fibonacci</title>
+    <meta charset="UTF-8">
+    <title>Số đảo ngược</title>
 </head>
 <body>
-  <h1>Dãy Fibonacci</h1>
-  <p>Nhập số nguyên dương n:</p>
-  <input type="number" id="n" name="n">
-  <button onclick="fibonacci()">In ra dãy Fibonacci</button>
-  <p id="result"></p>
-
-  <script>
-    function fibonacci() {
-      // Lấy giá trị n từ input
-      var n = parseInt(document.getElementById("n").value);
-
-      // Khởi tạo hai số đầu tiên của dãy Fibonacci
-      var a = 0, b = 1;
-
-      // Danh sách để lưu trữ các số Fibonacci
-      var fibs = [];
-
-      // Lặp n lần
-      while (fibs.length < n) {
-        // Thêm số Fibonacci tiếp theo vào danh sách
-        fibs.push(a);
-
-        // Tính số Fibonacci tiếp theo
-        var temp = a;
-        a = b;
-        b = temp + b;
-      }
-
-      // Hiển thị kết quả
-      var result = "Dãy Fibonacci " + n + " số đầu tiên: " + fibs.join(", ");
-      document.getElementById("result").innerHTML = result;
-    }
-  </script>
+    <h1>Số đảo ngược của 123 là:</h1>
+    <p id="result"></p>
+    <script>
+        var num = 123;
+        var reversedNum = 0;
+        while (num > 0) {
+            reversedNum = reversedNum * 10 + num % 10;
+            num = Math.floor(num / 10);
+        }
+        document.getElementById("result").innerHTML = reversedNum;
+    </script>
 </body>
 </html>

@@ -10,17 +10,36 @@
         OOP : Lập trình hướng đối tượng
         Khái niệm: ÔP là 1 cách tổ chức dũ liệu giúp mô tả thông tin tốt hơn
         Đối tượng là 1 biến đặc biệt ( bên trong nó sẽ có nhiều phần tử có tên)
-        Cú pháp
-        Cách dùng
+        Cú pháp let a = {}
+        Cách dùng a.name
+        Lớp là bộ khung để tạo ra các đối tượng có tên các phần tử giống nhau
      -->
      <script>
         let arr = {
             name: 'NAL',
             age: 18,
             isPoor: true ,
+            address: "TB",
+            f1: function() {
+                alert("Hâha");
+            },
         };
-        alert(arr["age"]);
-        alert(arr.name);
+        class Student {
+            constructor(name, age, score) {
+                this.name = name;
+                this.age = age;
+                this.score = score;
+            }
+            f2() {
+                alert(this.name + "," + this.age + "," + this.score);
+            }
+        } 
+
+        let s1 = new Student("ABC", 20, 10);
+        let s2 = new Student("ABCD", 20, 8);
+        s1.f2();
+        s2.f2();
+        // tạo 2 đối tượng có tên:
      </script>
 </body>
 </html>
