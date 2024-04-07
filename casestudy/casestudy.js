@@ -140,7 +140,7 @@ function sapXep() {
     list();
 }
 function timkiem() {
-    let keyword = document.querySelector('input[type="text"]').value.toLowerCase();
+    let keyword = document.getElementById("searchInput").value.toLowerCase();
     let filteredList = listpro.filter(function (item) {
         return (
             item.id.toLowerCase().includes(keyword) ||
@@ -154,7 +154,6 @@ function timkiem() {
     });
 
     let main = '<table style="width: 100%; background-color: azure;"><tr><th style="width: 10%; border: 1px solid;">ID</th><th style="width: 20%; border: 1px solid;">Họ và Tên</th><th style="width: 15%; border: 1px solid;">Ngày tháng năm sinh</th><th style="width: 10%; border: 1px solid;">Giới Tính</th><th style="width: 15%; border: 1px solid;">Số điện thoại</th><th style="width: 15%; border: 1px solid;">Ngày vào công ty</th><th style="width: 15%; border: 1px solid;">Quê quán</th></tr>';
-
     for (let i = 0; i < filteredList.length; i++) {
         main += `<tr>
     <td style="width: 10%; border: 1px solid;">${filteredList[i].id}</td>
