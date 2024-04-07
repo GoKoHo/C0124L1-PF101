@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p id="p"></p>
     <script>
-        class sanpham{
-            constructor (a, b, c, d) {
+        class sanpham {
+            constructor(a, b, c, d) {
                 this.id = a;
                 this.name = b;
                 this.price = c;
                 this.quantily = d;
             }
             in() {
-                document.getElementById("p").innerHTML = this.id +"," +this.name + "," + this.price + "," + this.quantily ;
+                document.getElementById("p").innerHTML = this.id + "," + this.name + "," + this.price + "," + this.quantily;
             }
         }
-        let s1 = new sanpham( "001", "Tinh", 3000, 521);
+        let s1 = new sanpham("001", "Tinh", 3000, 521);
         s1.in();
     </script>
 </body>
+
 </html>

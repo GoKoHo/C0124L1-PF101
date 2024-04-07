@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="casestydy.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><h1>Cty TNHH PV</h1></div>
+        <div class="banner">
+            <table style="float: right;">
+                <tr>
+                    <td>Tên tài khoản</td>
+                    <td><input type="text" placeholder="admin" id="acc"></td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu</td>
+                    <td><input type="text" placeholder="admin" id="pass"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button onclick="login()">Login</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="home">
+        <div class="menu">
+            <section>
+                <input type="text" placeholder="Tìm kiếm nhân viên"> <BUtton>Tìm kiếm</BUtton>
+            </section>
+            <h3>Danh sách nhân viên</h3>
+            <h3>Chỉnh sửa danh sách</h3>
+            <h3>Thêm nhân viên mới</h3>
+        </div>
+        <div class="main">
+            <h2>Chào mừng bạn đến với trang quản lý nhân viên công ty TNHH VP</h2>
+            <p id="result">Bạn cần đăng nhập để tiếp tục</p>
+        </div>
+    </div>
+    <script>
+        function login() {
+            let account = document.getElementById("acc").value;
+            let password = document.getElementById("pass").value;
+            let adminAccount = "admin";
+            let adminPassword = "admin";
+            if (account === adminAccount && password === adminPassword) {
+                window.location.href="main.html";
+            } else {
+                document.getElementById("result").innerHTML = "Bạn đã nhập sai mật khẩu hoặc tài khoản";
+            }
+        }
+    </script>
+</body>
+</html>
