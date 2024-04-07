@@ -104,7 +104,7 @@ function add() {
         <input placeholder="Nhập số điện thoại" id="nhapphone-add"> <br>
         <input placeholder="Nhập ngày gia nhập" id="nhapdate-add"> <br>
         <input placeholder="Nhập khu vực" id="nhaparea-add"> <br>
-        <button onclick="them()" >Thêm</button>`; 
+        <button onclick="them()" >Thêm</button>`;
 
     document.getElementById("main").innerHTML = main;
 }
