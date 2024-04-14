@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng 30 số chia hết cho 7</title>
+</head>
+
+<body>
+    <script>
+        // Hàm tìm số chia hết cho 7 đầu tiên trong khoảng [1, n]
+        function findFirstDivisibleBySeven(n) {
+            for (let i = 1; i <= n; i++) {
+                if (i % 7 === 0) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        // Hàm tính tổng các số chia hết cho 7 trong khoảng [start, end]
+        function findSumOfDivisibleNumbers(start, end) {
+            let sum = 0;
+            let currentNumber = findFirstDivisibleBySeven(start);
+            while (currentNumber !== -1 && currentNumber <= end) {
+                sum += currentNumber;
+                currentNumber += 7;
+            }
+            return sum;
+        }
+
+        // Tính tổng 30 số chia hết cho 7 đầu tiên
+        const sum = findSumOfDivisibleNumbers(1, 203); // 210 = 7 * 30
+
+        // Hiển thị kết quả trên console
+        document.write(sum);
+    </script>
+</body>
+
+</html>

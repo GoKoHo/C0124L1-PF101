@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tìm số Fibonacci đầu tiên chia hết cho 5</title>
+</head>
+
+<body>
+  <h1>Tìm số Fibonacci đầu tiên chia hết cho 5</h1>
+  <script>
+    // Tìm số đầu tiên trong dãy Fibonacci chia hết cho 5
+    function findFirstDivisibleByFive() {
+      let a = 0;
+      let b = 1;
+
+      // Lặp đến khi tìm thấy số chia hết cho 5
+      while (true) {
+        let next = a + b;
+
+        // Kiểm tra nếu next chia hết cho 5
+        if (next % 5 === 0) {
+          return next;
+        }
+
+        // Cập nhật các biến cho vòng lặp tiếp theo
+        a = b;
+        b = next;
+      }
+    }
+
+    const firstDivisible = findFirstDivisibleByFive();
+    console.log("Số Fibonacci đầu tiên chia hết cho 5 là:", firstDivisible);
+  </script>
+</body>
+
+</html>

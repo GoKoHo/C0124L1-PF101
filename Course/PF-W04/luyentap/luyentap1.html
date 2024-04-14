@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // bài 1 : sử dụng vòng lập để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành
+        for (i = 0; i < 100; i++) {
+            if (i == 99) {
+                alert("Hoàn thành");
+            }
+        }
+        // bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+        let C = +prompt("Nhập nhiệt độ hiện tại: ");
+        for (i = 1; i < C; i++) {
+            if (C < 20) {
+                alert("Hãy tăng nhiệt độ");
+                break;
+            }
+            if (C > 100) {
+                alert("Hãy giảm nhiệt độ");
+                break;
+            }
+            else { alert("Nhiệt độ OK") }
+            break;
+        }
+        // bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+        function Fibonacci(){
+             let n = +prompt("Nhập vào số nguyên: ");
+             let a = 0;
+             let b = 1;
+             let fibs=[];
+             while(fibs.length<n){
+                fibs.push(a);
+                let temp = a;
+                a = b;
+                b= temp +b;
+             }
+             document.write(fibs);
+        }
+    </script>
+</body>
+
+</html>

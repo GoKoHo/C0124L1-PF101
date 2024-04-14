@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+        let n = 20;
+        let a = 0;
+        let b = 1;
+        let fibs = [];
+        for (let i = 0; i < n; i++) {
+            fibs.push(a);
+            let x = a;
+            a = b;
+            b = x + b;
+        }
+        document.write(fibs);
+    </script>
+</html>
