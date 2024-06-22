@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản Lý Nhân Viên</title>
-    <link rel="stylesheet" href="casestydy.css">
 </head>
-<STYle>
+<style>
     .header {
         width: 100%;
         height: 100px;
@@ -49,7 +48,7 @@
         text-align: center;
         background-color: cornsilk;
     }
-</STYle>
+</style>
 
 <body>
     <div id="loginForm">
@@ -100,6 +99,8 @@
                 <button onclick="add()" style="border: none; width: 100%;background-color: gold;">
                     <h3>Thêm nhân viên mới</h3>
                 </button>
+                <div id="areaButtons">
+                </div>
             </div>
             <div class="main" id="main">
                 <h2>Chào mừng bạn đến với trang quản lý nhân viên công ty TNHH VP</h2>
@@ -116,6 +117,7 @@
             if (account === adminAccount && password === adminPassword) {
                 document.getElementById("loginForm").style.display = "none";
                 document.getElementById("mainContent").style.display = "block";
+                taoNutArea();
             } else {
                 alert("Bạn đã nhập sai mật khẩu hoặc tài khoản");
             }
@@ -237,6 +239,7 @@
                 area: themarea
             }
             listpro.push(themnhavien);
+            taoNutArea();
             list();
         }
 
@@ -279,6 +282,44 @@
             main += '</table>';
 
             document.getElementById("main").innerHTML = main;
+        }
+
+        function hienThiTheoArea(area) {
+            let filteredList = listpro.filter(item => item.area === area);
+
+            let main = '<table style="width: 100%; background-color: azure;"><tr><th style="width: 10%; border: 1px solid;">ID</th><th style="width: 20%; border: 1px solid;">Họ và Tên</th><th style="width: 15%; border: 1px solid;">Ngày tháng năm sinh</th><th style="width: 10%; border: 1px solid;">Giới Tính</th><th style="width: 15%; border: 1px solid;">Số điện thoại</th><th style="width: 15%; border: 1px solid;">Ngày vào công ty</th><th style="width: 15%; border: 1px solid;">Quê quán</th></tr>';
+            for (let i = 0; i < filteredList.length; i++) {
+                main += `<tr>
+                    <td style="width: 10%; border: 1px solid;">${filteredList[i].id}</td>
+                    <td style="width: 20%; border: 1px solid;">${filteredList[i].name}</td>
+                    <td style="width: 15%; border: 1px solid;">${filteredList[i].birthday}</td>
+                    <td style="width: 10%; border: 1px solid;">${filteredList[i].sex}</td>
+                    <td style="width: 15%; border: 1px solid;">${filteredList[i].phone}</td>
+                    <td style="width: 15%; border: 1px solid;">${filteredList[i].date}</td>
+                    <td style="width: 15%; border: 1px solid;">${filteredList[i].area}</td>
+                </tr>`;
+            }
+
+            main += '</table>';
+
+            document.getElementById("main").innerHTML = main;
+        }
+        function taoNutArea() {
+            let areas = new Set(listpro.map(item => item.area)); // Lấy danh sách các area duy nhất
+
+            let areaButtonsDiv = document.getElementById("areaButtons");
+            areaButtonsDiv.innerHTML = ""; // Xóa các button cũ (nếu có)
+
+            areas.forEach(area => {
+                let button = document.createElement("button");
+                button.textContent = area;
+                button.style.border = 'none';
+                button.style.width = '100%';
+                button.style.backgroundColor = 'gold';
+                button.onclick = () => hienThiTheoArea(area);
+                areaButtonsDiv.appendChild(button);
+                areaButtonsDiv.appendChild(document.createElement("br")); // Thêm dòng mới sau mỗi button
+            });
         }
 
     </script>
